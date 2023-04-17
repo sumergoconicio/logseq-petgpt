@@ -1,0 +1,61 @@
+{
+  "name": "logseq-chatgpt-plugin",
+  "version": "1.1.0",
+  "title": "Logseq ChatGPT Plugin",
+  "description": "A tightly integrated chatGPT plugin for Logseq.",
+  "main": "dist/index.html",
+  "targets": {
+    "main": false
+  },
+  "type": "module",
+  "default": "dist/index.html",
+  "repo": "debanjandhar12/logseq-chatgpt-plugin",
+  "author": "@debanjandhar12",
+  "scripts": {
+    "dev": "parcel watch ./src/index.ts --public-url ./ && cp ./src/index.html ./dist/index.html",
+    "build": "parcel build ./src/index.ts --public-url ./ && cp ./src/index.html ./dist/index.html",
+    "test": "jest"
+  },
+  "license": "AGPL-3.0",
+  "logseq": {
+    "id": "_rw1zys420",
+    "icon": "/icon.png"
+  },
+  "dependencies": {
+    "@logseq/libs": "^0.0.14",
+    "await-lock": "^2.2.2",
+    "cancelable-promise": "4.3.1",
+    "lodash": "^4.17.21",
+    "node-gyp": "^9.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "moment": "^2.29.4",
+    "mldoc": "^1.5.3",
+    "chatgpt-wrapper": "^1.1.4",
+    "mustache": "^4.2.0",
+    "showdown": "^2.1.0",
+    "gpt-3-encoder": "^1.1.4"
+  },
+  "devDependencies": {
+    "@parcel/transformer-inline-string": "2.5.0",
+    "@parcel/config-default": "2.5.0",
+    "@types/lodash": "^4.14.177",
+    "@types/node": "^18.8.3",
+    "assert": "^2.0.0",
+    "buffer": "^6.0.3",
+    "constants-browserify": "^1.0.0",
+    "parcel": "2.5.0",
+    "path-browserify": "^1.0.1",
+    "vm-browserify": "^1.1.2",
+    "jest": "^29.5.0",
+    "jest-cli": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "babel-jest": "^29.5.0",
+    "ts-jest": "^29.0.5",
+    "@babel/core": "^7.21.3",
+    "@babel/preset-typescript": "^7.20.2",
+    "@types/jest": "^29.4.1",
+    "@babel/preset-env": "^7.20.2",
+    "@types/mustache": "^4.2.2"
+  }
+}
